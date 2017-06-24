@@ -3,14 +3,14 @@
 # FIRST UPDATE THE VIM SUBMODULE
 git submodule update --init --recursive
 
-ln -s bash_profile ../.bash_profile
-ln -s dircolors ../.dircolors
-ln -s gitconfig ../.gitconfig
-ln -s zshrc ../.zshrc
+ln -s .dotfiles/bash_profile ../.bash_profile
+ln -s .dotfiles/dircolors ../.dircolors
+ln -s .dotfiles/gitconfig ../.gitconfig
+ln -s .dotfiles/zshrc ../.zshrc
 
 
 
 cd vimrc/
 git submodule update --init --recursive
 cd ..
-ln -s vim/vimrc ../.vimrc
+ln -s .dotfiles/vim/vimrc ../.vimrc
