@@ -1,16 +1,22 @@
 #!/usr/bin/bash
 
-# FIRST UPDATE THE VIM SUBMODULE
-git submodule update --init --recursive
+# TODO: SAVE ALREADY EXISTING DOTFILES IN BACKUPFOLDER
 
+
+# CREATE SYMLINKS TO DOTFILES IN HOME DIR
+echo "Creating dotfiles..."
 ln -s .dotfiles/bash_profile ../.bash_profile
 ln -s .dotfiles/dircolors ../.dircolors
 ln -s .dotfiles/gitconfig ../.gitconfig
 ln -s .dotfiles/zshrc ../.zshrc
+echo "...done"
 
 
-
+echo "Getting vimrc git submodule and submodules of vimrc.git..."
+# FIRST GET THE VIMRC SUBMODULE
+git submodule update --init --recursive
+# CHANGE INTO VIMRC FOLDER AND GET SUBMODULES OF VIMRC.GIT
 cd vimrc/
 git submodule update --init --recursive
 cd ..
-ln -s .dotfiles/vim/vimrc ../.vimrc
+ln -s .dotfiles/vimrc/vimrc ../.vimrc
