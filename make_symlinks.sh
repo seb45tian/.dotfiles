@@ -20,3 +20,4 @@ cd vimrc/
 git submodule update --init --recursive
 cd ..
 ln -s .dotfiles/vimrc/vimrc ../.vimrc
+ln -s .dotfiles/vimrc ../.vim
