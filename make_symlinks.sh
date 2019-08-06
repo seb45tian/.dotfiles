@@ -5,10 +5,9 @@
 
 # CREATE SYMLINKS TO DOTFILES IN HOME DIR
 echo "Creating dotfiles..."
-ln -s .dotfiles/bash_profile ../.bash_profile
-ln -s .dotfiles/dircolors ../.dircolors
+#ln -s .dotfiles/bash_profile ../.bash_profile
+#ln -s .dotfiles/dircolors ../.dircolors
 ln -s .dotfiles/gitconfig ../.gitconfig
-ln -s .dotfiles/zshrc ../.zshrc
 echo "...done"
 
 
